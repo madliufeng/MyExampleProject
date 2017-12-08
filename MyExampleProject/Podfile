@@ -1,0 +1,47 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MyExampleProject' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for MyExampleProject
+	pod 'AFNetworking', '~> 3.1.0'
+	pod 'YYText'
+	pod 'Masonry'
+	pod 'MJExtension'
+	pod 'SDWebImage'
+	pod 'IQKeyboardManager', '3.0.0'
+	pod 'MJRefresh'
+	pod 'SVProgressHUD'
+	pod 'MBProgressHUD'
+	pod 'YYCategories'
+	pod 'BlocksKit'
+	pod 'FXBlurView'
+	pod 'SDCycleScrollView'
+	pod 'CocoaLumberjack'
+	pod 'Aspects'
+    #pod 'JKCategories' #需要可以加上
+    
+    #SDk集成
+    pod 'WechatOpenSDK' #微信
+    pod “BaiduMapKit” #百度地图SDK
+
+#pod 'HyphenateLite'
+
+#pod 'EaseUI', :git => 'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
+
+    #pod 'RedpacketAliAuthLib'
+
+
+  target 'MyExampleProjectTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MyExampleProjectUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
