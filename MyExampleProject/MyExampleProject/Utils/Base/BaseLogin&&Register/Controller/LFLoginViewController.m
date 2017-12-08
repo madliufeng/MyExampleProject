@@ -9,6 +9,7 @@
 #import "LFLoginViewController.h"
 #import "LFTabBarController.h"
 #import "LFLoginAPI.h"
+#import "AppDelegate.h"
 @interface LFLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
@@ -67,7 +68,8 @@
 #pragma mark - NetWork
 - (void)netWorkCodeSuccessBackWithResponseObject:(id)responseObject {
     if ([responseObject isKindOfClass:[LFLoginAPI class]]) {
-        
+        AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        [appDelegate setupHomeViewController];
     }
 }
 

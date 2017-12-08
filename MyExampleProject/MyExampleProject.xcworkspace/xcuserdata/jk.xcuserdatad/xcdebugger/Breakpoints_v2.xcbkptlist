@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyExampleProject/Utils/Base/BaseLogin&amp;&amp;Register/Controller/LFLoginViewController.m"
-            timestampString = "534394177.731764"
+            timestampString = "534412605.321515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-netWorkCodeSuccessBackWithResponseObject:"
-            landmarkType = "7">
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "LFLoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

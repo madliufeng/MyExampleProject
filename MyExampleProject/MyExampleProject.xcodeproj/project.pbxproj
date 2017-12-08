@@ -205,6 +205,7 @@
 		48A176F31FDA3E0A00D0F041 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176E91FDA3E0900D0F041 /* JSONValueTransformer.m */; };
 		48A176F61FDA3EBE00D0F041 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176F51FDA3EBE00D0F041 /* Singleton.m */; };
 		48A176FA1FDA3F9400D0F041 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176F91FDA3F9300D0F041 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		48A176FD1FDA7BE800D0F041 /* LFMultithreadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176FC1FDA7BE800D0F041 /* LFMultithreadingVC.m */; };
 		99AB0B5D34232C4F71F2DE3B /* libPods-MyExampleProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F3775B578E7C1C9E14901B /* libPods-MyExampleProjectUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -625,6 +626,8 @@
 		48A176F51FDA3EBE00D0F041 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
 		48A176F81FDA3F9300D0F041 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		48A176F91FDA3F9300D0F041 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		48A176FB1FDA7BE800D0F041 /* LFMultithreadingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMultithreadingVC.h; sourceTree = "<group>"; };
+		48A176FC1FDA7BE800D0F041 /* LFMultithreadingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMultithreadingVC.m; sourceTree = "<group>"; };
 		52C5F16473151AD6C8B8D5D8 /* Pods-MyExampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExampleProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyExampleProject/Pods-MyExampleProject.release.xcconfig"; sourceTree = "<group>"; };
 		6303A6E751BBCD0331F90F91 /* libPods-MyExampleProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyExampleProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91857E502E31C04F56F3952F /* Pods-MyExampleProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExampleProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyExampleProjectUITests/Pods-MyExampleProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -711,12 +714,12 @@
 		156DA7801FD540070082CA90 /* MyExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				15AA1FDD1FD5564E002D3DC1 /* Images.xcassets */,
 				15AA20221FD67FC6002D3DC1 /* Tools */,
-				15AA1FC01FD5564E002D3DC1 /* Classes */,
 				15AA1F401FD55622002D3DC1 /* SDK集成 */,
 				15AA1E031FD55621002D3DC1 /* Utils */,
 				15AA1EA91FD55621002D3DC1 /* Vendors */,
+				15AA1FC01FD5564E002D3DC1 /* Classes */,
+				15AA1FDD1FD5564E002D3DC1 /* Images.xcassets */,
 				156DA7811FD540070082CA90 /* AppDelegate.h */,
 				156DA7821FD540070082CA90 /* AppDelegate.m */,
 				156DA7841FD540070082CA90 /* ViewController.h */,
@@ -994,14 +997,14 @@
 		15AA1E731FD55621002D3DC1 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				15AA1E741FD55621002D3DC1 /* LFBaseViewController.m */,
-				15AA1E751FD55621002D3DC1 /* LFBaseCollectionViewController.h */,
-				15AA1E761FD55621002D3DC1 /* LFViewController.m */,
-				15AA1E771FD55621002D3DC1 /* LFBaseTableViewController.m */,
-				15AA1E781FD55621002D3DC1 /* LFBaseCollectionViewController.m */,
 				15AA1E791FD55621002D3DC1 /* LFBaseViewController.h */,
+				15AA1E741FD55621002D3DC1 /* LFBaseViewController.m */,
 				15AA1E7A1FD55621002D3DC1 /* LFBaseTableViewController.h */,
+				15AA1E771FD55621002D3DC1 /* LFBaseTableViewController.m */,
 				15AA1E7B1FD55621002D3DC1 /* LFViewController.h */,
+				15AA1E761FD55621002D3DC1 /* LFViewController.m */,
+				15AA1E781FD55621002D3DC1 /* LFBaseCollectionViewController.m */,
+				15AA1E751FD55621002D3DC1 /* LFBaseCollectionViewController.h */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -1590,6 +1593,8 @@
 			children = (
 				15AA1FC31FD5564E002D3DC1 /* LFHomeViewController.m */,
 				15AA1FC41FD5564E002D3DC1 /* LFHomeViewController.h */,
+				48A176FB1FDA7BE800D0F041 /* LFMultithreadingVC.h */,
+				48A176FC1FDA7BE800D0F041 /* LFMultithreadingVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2416,6 +2421,7 @@
 				15AA1F661FD55622002D3DC1 /* NSString+LF.m in Sources */,
 				15AA1FA91FD55622002D3DC1 /* QBImagePickerGroupCell.m in Sources */,
 				48A176EE1FDA3E0A00D0F041 /* NSArray+JSONModel.m in Sources */,
+				48A176FD1FDA7BE800D0F041 /* LFMultithreadingVC.m in Sources */,
 				15AA1FBA1FD55622002D3DC1 /* DLTabedSlideView.m in Sources */,
 				15AA1F591FD55622002D3DC1 /* UIAlertView+LF.m in Sources */,
 				15AA20341FD6887E002D3DC1 /* GVUserDefaults.m in Sources */,

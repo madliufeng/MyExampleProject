@@ -22,6 +22,8 @@ Active（激活）
 壹家教登录逻辑
 1.登录壹家教服务器
 2.登录环信服务器
+
+
 3.登录微店服务器
 4.登录备课服务器
 5.登录考拉中心库
@@ -34,3 +36,12 @@ Active（激活）
 4. 在iOS9以上系统需要增加一个可跳转App的白名单，即LSApplicationQueriesSchemes，具体看文档
 5.环信只需要导入HyphenateLite这个库就可以，很简单 UI如果是用环信的话可以导入EaseUI, 不需要用就自己写
 
+
+copy 和Strong哪个好，修饰字符串
+
++ (NSDictionary *)mj_objectClassInArray {
+return @{@"chengYuan":[LFGroupDetailChatModel class]};
+}
+
++(NSDictionary *)mj_replacedKeyFromPropertyName {
+return @{@"Id":@"id"};

@@ -9,5 +9,18 @@
 #import "LFLoginAPI.h"
 @implementation LFLoginAPI
 
+@end
+
+@implementation LFUserInfoModel
 
 @end
+
+@implementation LFXueKeListModel
+
+@end
+
+@implementation LFXueDuanNianJiListModel
+
+@end
+
+
