@@ -39,9 +39,15 @@ Active（激活）
 
 copy 和Strong哪个好，修饰字符串
 
+
+### MJExtention使用
+    主要参考  MJKeyValue协议
+数组包含字典模型
+
 + (NSDictionary *)mj_objectClassInArray {
 return @{@"chengYuan":[LFGroupDetailChatModel class]};
 }
 
+替换id
 +(NSDictionary *)mj_replacedKeyFromPropertyName {
 return @{@"Id":@"id"};

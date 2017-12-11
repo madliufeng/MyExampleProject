@@ -8,10 +8,22 @@
 
 #import "LFLoginAPI.h"
 @implementation LFLoginAPI
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"xueDuanNianJiList" : [LFXueDuanNianJiListModel class],
+             @"xueKeList" : [LFXueKeListModel class],
+             @"list" : [LFUserInfoModel class],
+             };
+}
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+      NSLog(@"key = %@, value = %@", key, value);
+}
 @end
 
+
 @implementation LFUserInfoModel
+
 
 @end
 
@@ -21,6 +33,12 @@
 
 @implementation LFXueDuanNianJiListModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"nianJiList" : [LFXueKeListModel class],
+             @"xueKeList" : [LFXueKeListModel class],
+             };
+}
 @end
 
 

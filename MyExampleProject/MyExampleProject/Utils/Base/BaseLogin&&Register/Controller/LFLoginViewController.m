@@ -36,20 +36,26 @@
 
 #pragma mark - Action
 /// 登录
-- (IBAction)loginBtn:(id)sender {
-    
+- (IBAction)loginBtn:(id)sender
+{
     LFLoginAPI *api = [[LFLoginAPI alloc]init];
     api.subUrl = @"dengLu";
     NSString *jindu = [NSString stringWithFormat:@"%.3f",BBUserDefault.longitude];
     NSString *weidu = [NSString stringWithFormat:@"%.3f",BBUserDefault.latitude];
-    [api.parameters setObject:self.userNameTF.text forKey:@"yongHuMin"];
-    [api.parameters setObject:self.passwordTF.text forKey:@"miMa"];
+
+    LFUserInfoModel *userModel  = [LFUserInfoModel read];
+    if (userModel) {
+        [api.parameters setObject:userModel.dianHua forKey:@"yongHuMin"];
+        [api.parameters setObject:@"liufeng123456" forKey:@"miMa"];
+    }else {
+        [api.parameters setObject:self.userNameTF.text forKey:@"yongHuMin"];
+        [api.parameters setObject:self.passwordTF.text forKey:@"miMa"];
+    }
     [api.parameters setObject:jindu forKey:@"jingDu"];
     [api.parameters setObject:weidu forKey:@"weiDu"];
     [api.parameters setObject:@1 forKey:@"leiXing"];
     [api.parameters setObject:@"kocla" forKey:@"fromApp"];
     [api startRequestWithType:RequestTypePOST backWithDelegate:self];
-    
 }
 
 ///登自动录
@@ -66,8 +72,14 @@
 
 
 #pragma mark - NetWork
-- (void)netWorkCodeSuccessBackWithResponseObject:(id)responseObject {
-    if ([responseObject isKindOfClass:[LFLoginAPI class]]) {
+- (void)netWorkCodeSuccessBackWithResponseObject:(id)responseObject
+{
+    if ([responseObject isKindOfClass:[LFLoginAPI class]])
+    {
+        LFLoginAPI *api = responseObject;
+        LFUserInfoModel *userModel = [api.list firstObject];
+        [userModel write];
+        NSLog(@"%@",userModel.yongHuMing);
         AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
         [appDelegate setupHomeViewController];
     }

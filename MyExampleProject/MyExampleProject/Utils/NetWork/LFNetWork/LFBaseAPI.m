@@ -95,6 +95,7 @@ static NSString * const kParametersAddTokenKeyPath = @"parametersAddToken";
 #endif
 
         LFBaseAPI *bAPIModel = [[self class] mj_objectWithKeyValues:dict];
+
         if (!bAPIModel || bAPIModel.code != NetworkCodeTypeSuccess) {
             return;
         }
