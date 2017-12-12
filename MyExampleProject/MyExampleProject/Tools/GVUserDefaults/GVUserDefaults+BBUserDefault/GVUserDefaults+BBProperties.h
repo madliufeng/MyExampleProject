@@ -22,7 +22,6 @@
 
 #pragma mark --是否是第一次启动APP程序
 @property (nonatomic,assign) BOOL isFirstLaunch;
-
 #pragma mark - 经纬度
 
 @property (nonatomic, assign) CGFloat latitude;

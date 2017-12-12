@@ -32,6 +32,11 @@
 /**************软酷正式环境*************/
 #define RKSeverHost @"http://mz.kocla.com/"
 
+//////**********中心库正式环境*************
+#define KLSeverHost @"http://api.beike.kocla.com/kocla-api/"
+#define KLZHIFUBAONOTIFURL @"http://api.beike.kocla.com/kocla-api/zhifubao/async"//支付宝回调URL
+#define KLWXNOTIFURL @"http://api.beike.kocla.com/kocla-api/weixin/async" //微信支付回调
+
 #define BEIKEXIAOER @"123456789"
 #define MEIRIYITI @"60028028"
 #define MEIRIKEJIYITI @"2852"
@@ -57,6 +62,12 @@
 #define BKSeverHost     @"http://218.17.158.37:8233/marketGateway/"//演示环境
 #define RUANKOSEVERHOST @"http://open.kocla.com/knowresource/"//备课文件夹专用
 /**************软酷拉商城演示环境*************/
+
+//////**********中心库演示环境*************
+#define KLSeverHost @"http://218.17.158.37:8233/kocla-api/"
+#define KLZHIFUBAONOTIFURL @"http://218.17.158.37:8233/kocla-api/zhifubao/async"//支付宝回调URL
+#define KLWXNOTIFURL @"http://218.17.158.37:8233/kocla-api/weixin/async" //微信支付回调
+
 #define RKSeverHost @"http://mzdemo.kocla.com:8837/"//考拉商城演示环境
 #define EaseKeFu @"ommhwznmaq"
 
@@ -86,6 +97,11 @@
 #define RUANKOSEVERHOST @"http://113.106.92.109/knowresource/"//备课文件夹专用
 //////**********软酷测试环境*************
 #define RKSeverHost @"http://mztest.kocla.com/"
+
+//////**********中心库测试环境*************
+#define KLSeverHost @"http://218.17.158.37:8880/kocla-api/"
+#define KLZHIFUBAONOTIFURL @"http://218.17.158.37:8880/kocla-api/zhifubao/async"//支付宝回调URL
+#define KLWXNOTIFURL @"http://218.17.158.37:8880/kocla-api/weixin/async" //微信支付回调
 
 #define BEIKEXIAOER @"123456789"
 #define MEIRIYITI @"10020402"

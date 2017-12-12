@@ -53,6 +53,19 @@ static NSString * const kParametersAddTokenKeyPath = @"parametersAddToken";
     return _parameters;
 }
 
+- (instancetype)initWithSubUrl:(NSString *)subUrl {
+    return [self initWithSubUrl:subUrl baseUrl:SeverHost];
+}
+
+- (instancetype)initWithSubUrl:(NSString *)subUrl baseUrl:(NSString *)baseUrl {
+    if (self = [super init]) {
+        self.subUrl = subUrl;
+        self.baseUrl = baseUrl;
+    }
+    return self;
+}
+
+
 - (void)startRequestWithType:(RequestType)type
                                 success:(nullable void (^)(id _Nullable responseObject))success
                                 failure:(nullable void (^)(NSError *_Nonnull error))failure {
@@ -114,9 +127,14 @@ static NSString * const kParametersAddTokenKeyPath = @"parametersAddToken";
     
 }
 
-//服务器地址
-- (NSString *)baseUrl {
-    return SeverHost;
+//设置默认服务器地址 可以在子类中重写，但是感觉调用初始化方法更好些
+//- (NSString *)baseUrl {
+//    return SeverHost;
+//}
+
+//这个防止崩溃
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    NSLog(@"key = %@, value = %@", key, value);
 }
 //- (LFBaseAPI *)dealWhileSuccess:(id)responseObject {
 // 请求完成后block

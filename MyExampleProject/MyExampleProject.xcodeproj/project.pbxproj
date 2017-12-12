@@ -181,6 +181,9 @@
 		15AA2B9F1FD797B0002D3DC1 /* LFLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA2B9E1FD797B0002D3DC1 /* LFLoginAPI.m */; };
 		15B254361FD82BEB00FB4D75 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B254321FD82BEA00FB4D75 /* NSArray+Extension.m */; };
 		15B254371FD82BEB00FB4D75 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B254341FD82BEA00FB4D75 /* NSDictionary+Extension.m */; };
+		487DD3491FDFAD6A00EDB82D /* LFWDLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 487DD3481FDFAD6A00EDB82D /* LFWDLoginAPI.m */; };
+		487DD34C1FDFC0A500EDB82D /* LFBKLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 487DD34B1FDFC0A500EDB82D /* LFBKLoginAPI.m */; };
+		487DD34F1FDFC3CF00EDB82D /* LFKLLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 487DD34E1FDFC3CF00EDB82D /* LFKLLoginAPI.m */; };
 		48A176C41FDA3D8400D0F041 /* KLCheckIsLoginReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176AC1FDA3D8200D0F041 /* KLCheckIsLoginReq.m */; };
 		48A176C51FDA3D8400D0F041 /* NSObject+cc_introspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176AE1FDA3D8200D0F041 /* NSObject+cc_introspect.m */; };
 		48A176C61FDA3D8400D0F041 /* RKMultipartReqParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A176B01FDA3D8200D0F041 /* RKMultipartReqParam.m */; };
@@ -577,6 +580,12 @@
 		17F3775B578E7C1C9E14901B /* libPods-MyExampleProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyExampleProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C142FCA00A12A4609371F2 /* Pods-MyExampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExampleProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyExampleProjectTests/Pods-MyExampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F5C540DADBE5317EFE7E8B6 /* Pods-MyExampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyExampleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyExampleProject/Pods-MyExampleProject.debug.xcconfig"; sourceTree = "<group>"; };
+		487DD3471FDFAD6A00EDB82D /* LFWDLoginAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFWDLoginAPI.h; sourceTree = "<group>"; };
+		487DD3481FDFAD6A00EDB82D /* LFWDLoginAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFWDLoginAPI.m; sourceTree = "<group>"; };
+		487DD34A1FDFC0A500EDB82D /* LFBKLoginAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFBKLoginAPI.h; sourceTree = "<group>"; };
+		487DD34B1FDFC0A500EDB82D /* LFBKLoginAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFBKLoginAPI.m; sourceTree = "<group>"; };
+		487DD34D1FDFC3CF00EDB82D /* LFKLLoginAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFKLLoginAPI.h; sourceTree = "<group>"; };
+		487DD34E1FDFC3CF00EDB82D /* LFKLLoginAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFKLLoginAPI.m; sourceTree = "<group>"; };
 		48A176AC1FDA3D8200D0F041 /* KLCheckIsLoginReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCheckIsLoginReq.m; sourceTree = "<group>"; };
 		48A176AD1FDA3D8200D0F041 /* KLProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLProgressLabel.h; sourceTree = "<group>"; };
 		48A176AE1FDA3D8200D0F041 /* NSObject+cc_introspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+cc_introspect.m"; sourceTree = "<group>"; };
@@ -1064,6 +1073,12 @@
 			children = (
 				15AA2B9D1FD797B0002D3DC1 /* LFLoginAPI.h */,
 				15AA2B9E1FD797B0002D3DC1 /* LFLoginAPI.m */,
+				487DD3471FDFAD6A00EDB82D /* LFWDLoginAPI.h */,
+				487DD3481FDFAD6A00EDB82D /* LFWDLoginAPI.m */,
+				487DD34A1FDFC0A500EDB82D /* LFBKLoginAPI.h */,
+				487DD34B1FDFC0A500EDB82D /* LFBKLoginAPI.m */,
+				487DD34D1FDFC3CF00EDB82D /* LFKLLoginAPI.h */,
+				487DD34E1FDFC3CF00EDB82D /* LFKLLoginAPI.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2371,6 +2386,7 @@
 				15AA1F4F1FD55622002D3DC1 /* HJLogFormatter.m in Sources */,
 				15AA1F4C1FD55622002D3DC1 /* UIViewController+AOP.m in Sources */,
 				15AA1FB81FD55622002D3DC1 /* Reachability.m in Sources */,
+				487DD3491FDFAD6A00EDB82D /* LFWDLoginAPI.m in Sources */,
 				15AA1F5D1FD55622002D3DC1 /* UIStoryboard+Addition.m in Sources */,
 				48A176EB1FDA3E0A00D0F041 /* JSONModelArray.m in Sources */,
 				15AA1F841FD55622002D3DC1 /* LFNewFeatrueCollectionViewCell.m in Sources */,
@@ -2436,6 +2452,7 @@
 				15AA1FE11FD5564E002D3DC1 /* LFMineViewController.m in Sources */,
 				15AA1FDF1FD5564E002D3DC1 /* LFListViewController.m in Sources */,
 				48A176C91FDA3D8400D0F041 /* METoast.m in Sources */,
+				487DD34F1FDFC3CF00EDB82D /* LFKLLoginAPI.m in Sources */,
 				15AA1F9B1FD55622002D3DC1 /* JTVerticalCalendarView.m in Sources */,
 				15AA1F6A1FD55622002D3DC1 /* CATransition+LF.m in Sources */,
 				15AA1F5A1FD55622002D3DC1 /* UIBarButtonItem+LF.m in Sources */,
@@ -2462,6 +2479,7 @@
 				15AA1F8D1FD55622002D3DC1 /* LTSCalendarView.m in Sources */,
 				15AA1F981FD55622002D3DC1 /* JTCalendarScrollManager.m in Sources */,
 				15AA1F6E1FD55622002D3DC1 /* LFTopWindow.m in Sources */,
+				487DD34C1FDFC0A500EDB82D /* LFBKLoginAPI.m in Sources */,
 				15AA1F7A1FD55622002D3DC1 /* LFRegistViewController.m in Sources */,
 				15AA1F7F1FD55622002D3DC1 /* LFSettingSwitchItem.m in Sources */,
 				15B254361FD82BEB00FB4D75 /* NSArray+Extension.m in Sources */,

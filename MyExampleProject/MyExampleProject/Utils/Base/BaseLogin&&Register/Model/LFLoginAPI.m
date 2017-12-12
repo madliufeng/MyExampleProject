@@ -16,9 +16,7 @@
              };
 }
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-      NSLog(@"key = %@, value = %@", key, value);
-}
+
 @end
 
 
