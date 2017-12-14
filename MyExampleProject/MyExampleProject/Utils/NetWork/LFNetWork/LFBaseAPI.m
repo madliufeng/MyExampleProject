@@ -99,25 +99,24 @@ static NSString * const kParametersAddTokenKeyPath = @"parametersAddToken";
     [LFNetworkTools requestWithType:type URLString:url parameters:self.parameters success:^(id  _Nullable responseObject) {
         //请求成功
         if (delegate && [delegate respondsToSelector:@selector(netWorkRequestSuccessBackWithResponseObject:)]) {
-            [delegate netWorkRequestSuccessBackWithResponseObject:responseObject];
+            [delegate netWorkRequestSuccessBackWithResponseObject:[responseObject mj_JSONObject]];
         }
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-
+        NSDictionary *dict = [responseObject mj_JSONObject];
+     
 #ifdef DEBUG
         [self logFinished:dict error:nil];
 #endif
 
-        LFBaseAPI *bAPIModel = [[self class] mj_objectWithKeyValues:dict];
+        LFBaseAPI *baseAPI = [[self class] mj_objectWithKeyValues:dict];
 
-        if (!bAPIModel || bAPIModel.code != NetworkCodeTypeSuccess) {
+        if (!baseAPI || baseAPI.code != NetworkCodeTypeSuccess) {
             return;
         }
 
         //代理传值
         if (delegate && [delegate respondsToSelector:@selector(netWorkCodeSuccessBackWithResponseObject:)]) {
-            [delegate netWorkCodeSuccessBackWithResponseObject:bAPIModel];
+            [delegate netWorkCodeSuccessBackWithResponseObject:baseAPI];
         }
-
 
     } failure:^(NSError * _Nonnull error) {
 #ifdef DEBUG
@@ -132,7 +131,7 @@ static NSString * const kParametersAddTokenKeyPath = @"parametersAddToken";
 //    return SeverHost;
 //}
 
-//这个防止崩溃
+//这个防止崩溃 模型中缺少对应字段
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     NSLog(@"key = %@, value = %@", key, value);
 }
