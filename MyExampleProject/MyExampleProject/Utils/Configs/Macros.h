@@ -55,7 +55,8 @@
 #define isIOS9                  ([[[UIDevice currentDevice]systemVersion]floatValue] >=9.0)
 // 是否iPad
 #define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
+//是否为iPhone X
+#define kIs_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 // 是否空对象
 #define IS_NULL_CLASS(OBJECT) [OBJECT isKindOfClass:[NSNull class]]
 //是否是4英寸
@@ -113,6 +114,11 @@
 #define kKeyWindow          [UIApplication sharedApplication].keyWindow
 #define kUserDefaults       [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
+
+
+//number转String
+#define KINT_TRANSLATE_STR(int_str) [NSString stringWithFormat:@"%d",int_str];
+#define KFLOAT_TRANSLATE_STR(float_str) [NSString stringWithFormat:@"%.2d",float_str];
 
 /**
  设置 view 圆角和边框

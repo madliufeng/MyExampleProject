@@ -12,13 +12,14 @@
 {
     NSInteger count;
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+    count++;
+    NSLog(@"LFLifeCycleView执行了------%@方法-------%ld",NSStringFromSelector(_cmd),count);
+
 }
-*/
+
+
 - (instancetype)init{
     self = [super init];
     if (self) {

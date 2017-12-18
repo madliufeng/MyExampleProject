@@ -201,6 +201,12 @@
  - (void)didMoveToWindow;
  这个方法可以根据self.superview的值判定，nil则为创建，反之，则为销毁。(注意这个方法和上面的是相反的)
  
+ didAddSubview
+ willRemoveSubview
+ 这两个方法要添加或移除子视图才会调用
+ 
+------drawRect:方法-------只会在layoutSubviews后调用
+
  链接：http://www.jianshu.com/p/9d98fad685c8
  來源：简书
  **/

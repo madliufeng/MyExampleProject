@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-//typedef void(^successBlock)(NSInteger buttonIndex);
+typedef void(^clickBlock)(NSInteger buttonIndex);
 
 @interface UIAlertView (MPBlock)
 
-//- (void)showWithBlock:(successBlock)block;
+- (void)showWithBlock:(clickBlock)block;
 
 @end

@@ -18,14 +18,21 @@
     self.view.backgroundColor=[UIColor whiteColor];
     
     self.myRunTimeTest=[[MPRunTimeTest alloc]init];
-    
+    //获取类的信息
     [self getClassInfo];
+    //获取类的对应属性
     [self getClassProperty];
+    //获取类的成员变量
     [self getClassMemberVariable];
+    //获取方法
     [self getClassMethod];
+    //获取类的协议列表
     [self getClassProtocol];
+    //动态增加方法
     [self addClassAction];
+    //分类动态增加属性
     [self addCategoryProperty];
+    //动态交换两个方法的实现
     [self changeMethod];
     
     //利用关联 封装BLOCK调用
