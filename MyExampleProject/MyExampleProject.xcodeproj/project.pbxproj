@@ -1507,13 +1507,9 @@
 		15AA1F401FD55622002D3DC1 /* SDK集成 */ = {
 			isa = PBXGroup;
 			children = (
-				15AA2B921FD6DF8F002D3DC1 /* QQ腾讯 */,
 				15AA1F411FD55622002D3DC1 /* 友盟分享 */,
-				15AA1F421FD55622002D3DC1 /* 微信 */,
 				15AA1F441FD55622002D3DC1 /* 环信 */,
-				15AA1F451FD55622002D3DC1 /* 极光推送 */,
 				15AA1F461FD55622002D3DC1 /* 支付宝 */,
-				15AA1F471FD55622002D3DC1 /* 百度地图 */,
 			);
 			path = "SDK集成";
 			sourceTree = "<group>";
@@ -1526,25 +1522,11 @@
 			path = "友盟分享";
 			sourceTree = "<group>";
 		};
-		15AA1F421FD55622002D3DC1 /* 微信 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "微信";
-			sourceTree = "<group>";
-		};
 		15AA1F441FD55622002D3DC1 /* 环信 */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "环信";
-			sourceTree = "<group>";
-		};
-		15AA1F451FD55622002D3DC1 /* 极光推送 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "极光推送";
 			sourceTree = "<group>";
 		};
 		15AA1F461FD55622002D3DC1 /* 支付宝 */ = {
@@ -1556,13 +1538,6 @@
 				15AA1FE51FD556E5002D3DC1 /* libssl.a */,
 			);
 			path = "支付宝";
-			sourceTree = "<group>";
-		};
-		15AA1F471FD55622002D3DC1 /* 百度地图 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "百度地图";
 			sourceTree = "<group>";
 		};
 		15AA1FC01FD5564E002D3DC1 /* Classes */ = {
@@ -1888,13 +1863,6 @@
 				15AA203D1FD68D07002D3DC1 /* MPLocationManager.m */,
 			);
 			path = "LcationManager(定位管理)";
-			sourceTree = "<group>";
-		};
-		15AA2B921FD6DF8F002D3DC1 /* QQ腾讯 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "QQ腾讯";
 			sourceTree = "<group>";
 		};
 		15AA2B9C1FD794FE002D3DC1 /* 壹家教相关 */ = {
