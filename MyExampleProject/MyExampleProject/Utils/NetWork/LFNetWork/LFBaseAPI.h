@@ -35,10 +35,23 @@ typedef NS_ENUM(NSInteger, NetworkCodeType) {
 @property (nonatomic, copy) NSString *baseUrl;
 
 
-//拼接Url字符串
-- (NSString *)appendedUrlString;
+/**
+ 初始化方法
+ 
+ @param subUrl 拼接的子路径
+ @return API
+ */
+- (instancetype)initWithSubUrl:(NSString *)subUrl;
 
-- (BOOL)isKindOfAPIClass:(Class)apiClass;
+/**
+ 初始化方法
+ 
+ @param subUrl 拼接的子路径
+ @param baseUrl 服务器地址
+ @return API
+ */
+- (instancetype)initWithSubUrl:(NSString *)subUrl baseUrl:(NSString *)baseUrl;
+
 
 /**
  block 回调请求方法
@@ -59,5 +72,13 @@ typedef NS_ENUM(NSInteger, NetworkCodeType) {
  @param delegate 代理
  */
 - (void)startRequestWithType:(RequestType)type backWithDelegate:(id <LFDataHanderProtocol>)delegate;
+
+
+//拼接Url字符串
+- (NSString *)appendedUrlString;
+
+- (BOOL)isKindOfAPIClass:(Class)apiClass;
+
+
 @end
 

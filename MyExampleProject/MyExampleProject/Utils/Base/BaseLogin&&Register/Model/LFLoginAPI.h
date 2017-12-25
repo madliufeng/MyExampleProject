@@ -7,6 +7,7 @@
 //
 
 #import "LFBaseAPI.h"
+#import "LFBaseModel.h"
 @class LFUserInfoModel;
 @class LFXueKeListModel;
 @class LFXueDuanNianJiListModel;
@@ -21,7 +22,7 @@
 @end
 
 
-@interface LFUserInfoModel : NSObject
+@interface LFUserInfoModel : LFBaseModel
 
 @property (nonatomic, strong) NSString *leiXing;
 @property (nonatomic, strong) NSString *yongHuId;
@@ -35,14 +36,14 @@
 
 @end
 
-@interface LFXueKeListModel : NSObject
+@interface LFXueKeListModel : LFBaseModel
 
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *name;
 
 @end
 
-@interface LFXueDuanNianJiListModel : NSObject
+@interface LFXueDuanNianJiListModel : LFBaseModel
 
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *name;

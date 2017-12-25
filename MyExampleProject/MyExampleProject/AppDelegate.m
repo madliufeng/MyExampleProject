@@ -37,11 +37,12 @@
     //加载页面
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self setupLoginViewController];
+    [self setupHomeViewController];
+//    [self setupLoginViewController];
   
-    [self setupIntroductoryPage];
+//    [self setupIntroductoryPage];
     //启动广告（记得放最后，才可以盖在页面上面）这个看具体需求，
-    [self setupAdveriseView];
+//    [self setupAdveriseView];
  
     return YES;
 }

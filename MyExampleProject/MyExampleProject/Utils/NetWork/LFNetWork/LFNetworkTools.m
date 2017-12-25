@@ -73,4 +73,12 @@
     [[LFNetworkTools sharedTool] requestWithType:type URLString:URLString parameters:parameters success:success failure:failure];
 }
 
+
+#pragma mark - 一家教中心库登录请求
+- (void)postKoclaAPIRequestWithURL:(NSString *)url
+                              body:(id)paramters
+                         onSuccess:(nullable void (^)(id _Nullable responseObject))success
+                           onError:(nullable void (^)(NSError *_Nonnull error))failure {
+    
+}
 @end

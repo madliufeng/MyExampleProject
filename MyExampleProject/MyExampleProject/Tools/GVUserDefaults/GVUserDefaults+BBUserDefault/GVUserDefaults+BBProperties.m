@@ -14,4 +14,6 @@
 @dynamic name;
 @dynamic role;
 @dynamic isFirstLaunch;
+@dynamic latitude;
+@dynamic longitude;
 @end
